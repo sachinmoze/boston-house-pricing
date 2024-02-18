@@ -1,0 +1,34 @@
+<!-- prediction.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        
+        <h1 class="mb-4">Boston house pricing prediction MEDV</h1>
+        
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Congratulations!</h4>
+            <p>The prediction of MEDV is:</p>
+            <p class="lead">{{ prediction_result }}</p>
+            <hr>
+            <a href="{% url 'home' %}" class="btn btn-secondary mb-3">Home Page</a>
+            <a href="{% url 'predict_medv' %}" class="btn btn-primary mb-3">Back previous page</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+{% load static %}
+<!-- medv_home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <!-- Custom background color -->
+    <style>
+        body {
+            background-color: #f0f0f0; /* Light gray background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5 mb-4">Linear Regression Model To Predict CHAS of Boston House Pricing</h2>
+        <a href="{% url 'home' %}" class="btn btn-secondary mb-3">Go back to Home Page</a>
+        
+        <h3>Development is in progress...</h3>
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
