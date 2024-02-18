@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib import messages
 from django.http import HttpResponse
-import openai
+#import openai
 # Create your views here.
 from django.http import JsonResponse
 #from trained_models import *
