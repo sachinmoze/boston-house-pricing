@@ -36,7 +36,10 @@ def predict_view(request):
         except Exception as e:
             return HttpResponse(f'Error loading trained model: {str(e)}')
         
-        constant = float(request.POST.get('CONST', 1.0))
+        try:
+            constant = float(request.POST.get('CONST', 1.0))
+        except Exception as e:
+            constant = 1.0    
         # Get the input values from the form
         CRIM = float(request.POST.get('CRIM'))
         ZN = float(request.POST.get('ZN'))
